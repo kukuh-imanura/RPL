@@ -1,0 +1,61 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ABOUT</title>
+
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/bootstrap/bootstrap.css' %}">
+
+</head>
+<body>
+
+    <img id="banner" src="{% static 'about/img/about.jpg' %}" alt="">
+
+    <div id="menu">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/buku/">Data Buku</a></li>
+            <li><a href="/tamu/">Buku Tamu</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <p></p>
+        <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">About Django</h4>
+            <p style="text-align: justify;">
+                Django itu merupakan Web Framework open sourcee berbasis Python, digagass oleh Jacob Kaplan dan Adrian Holovaty. Django menjadi ssalah satu Web Framework terbesar yeng dimiliki Python baik dari segi komunitas maupun Web Framework itu sendiri. Django memiliki sebuah badan yang dinamakan dengan Django Software Foundation yang bertugas mengelola pendanaan untuk kelangsungan pengembangan Django. <br>
+            </p>
+            <p style="text-align: justify;">
+                Django memiliki tagline <b>"The web framework for perfectionist with deadlines"</b>, bagaimana tidak, karena secara default Django sudah memiliki berbagai modul umum yang biasa digunakan ketika mengembangkan aplikasi web. Dengan Django saja, Anda sudah dapat menggunakan autentikasi sendiri, dan mendapatkan halaman admin sesuai dengan model yang kamu definisikan di dalam aplikasi! <br>
+            </p>
+            <p style="text-align: justify;">
+                Django banyak dipakai oleh perusahaan internet besar belakangan ini seperti Instagram, Discus, Mozzila dan masih banyak lagi. Django di ciptakan untuk memudahkan developer membuat aplikasi web dengan cepat, mudah dan dengan kode yang lebih sedikit.
+            </p>
+            <hr>
+            <p class="mb-0">
+                Django awalnya dikembangkan pada tahun 2003 dan 2005 oleh beberapa web developer yang bertugas membuat beberapa website, orang-orang tersebut mulai membuat ulang kode-kode yang pernah mereka tulis dan menerapkan beberapa design pattern. Lalu disebarkan sebagai project open source dengan nama <b>"Django"</b> pada bulan Juli 2005.
+            </p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <span class="text-dark">Copyright 2022</span>
+        </div>
+    </footer>
+
+    <script src="{% static 'vendor/bootstrap/jquery-3.3.1.slim.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'vendor/bootstrap/popper.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'vendor/bootstrap/bootstrap.js' %}" type="text/javascript"></script>
+    
+</body>
+</html>

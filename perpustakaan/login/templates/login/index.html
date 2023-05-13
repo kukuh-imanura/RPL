@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/bootstrap/bootstrap.css' %}">
+</head>
+<body>
+
+    <div class="container">
+        <center>
+            <div class="jumbotron" style="display: inline-block; padding-left: 100px; padding-right: 100px;">
+                <h1>Buku Tamu</h1><hr>
+
+                <form class="" action="" method="POST">
+                    {% csrf_token %}
+
+                    <table class="">
+                        {{login.as_table}}
+                    </table>
+
+                    <button class="btn btn-success" type="submit">Login</button>
+
+                </form>
+
+            </div>
+        </center>
+        
+    </div>
+    
+</body>
+</html>
