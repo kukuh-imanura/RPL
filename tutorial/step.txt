@@ -1,0 +1,8 @@
+1. Persiapan
+	- Buat Folder		: 
+	- Instal Virtual Env	: python -m venv Env
+	- Aktivkan Env		: Env\Scripts\activate.bat
+	- Install pip		: python -m install pip
+	- Update pip		: python -m pip install --upgrade pip
+	- Install Django	: pip install Django
+	- 
