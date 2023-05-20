@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME</title>
+    <title>PETUGAS</title>
 
     <!-- MENGGUNAKAN BOOTSTRAP -->
     <!-- <link rel="stylesheet" href="{% static 'bootstrap/bootstrap.css' %}"> -->
@@ -75,22 +75,53 @@
         </div>
     </nav>
 
-    <!-- HEADLINE -->
-    <div class="container d-flex justify-content-center mt-5">
-        <div class="w-50">
-            <hr>
-            <h5>Perpustakaan SMKN 3 Sumbawa besar</h5>
-            <p id="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro obcaecati, consequuntur dolorem soluta cum doloremque deleniti hic nulla consectetur similique. Iste voluptatem autem molestiae reprehenderit eaque minus ullam quidem impedit. </p>
-            <center>
-                <a href="#">
-                    <button class="btn btn-dark">More</button>
-                </a>
-            </center>
-            <hr>
-        </div>
-    </div>
-
     <!-- CONTENT -->
+    <div class="container mt-5">
+        <h1 class="text-center">PETUGAS</h1>
+
+        <center class="mt-3">
+            <a href="/petugas/tambah/">
+                <button class="btn btn-dark">Tambah Petugas</button>
+            </a>
+        </center>
+
+        <hr>
+        <table class="table text-center">
+            <tr>
+                <th>Kode Petugas</th>
+                <th>Nama</th>
+                <th>Jabatan</th>
+                <th>Username</th>
+                <!-- HAPUS KOLOM PASSWORD -->
+                <th>Password</th>
+                <th colspan="2">Aksi</th>
+            </tr>
+
+            <!-- PERULANGAN DATA PETUGAS -->
+            {% for data in dataPetugas %}
+
+            <tr>
+                <td>{{ data.kodePetugas }}</td>
+                <td>{{ data.nama }}</td>
+                <td>{{ data.jabatan }}</td>
+                <td>{{ data.username }}</td>
+                <!-- HAPUS KOLOM PASSWORD -->
+                <td>{{ data.password }}</td>
+                <td>
+                    <button type="submit" class="btn btn-primary">
+                        <a href="/petugas/{{ data.kodePetugas }}/update/" class="text-center text-light">Edit</a>
+                    </button>
+                    <button type="submit" class="btn btn-danger">
+                        <a href="/petugas/{{ data.kodePetugas }}/hapus/" class="text-center text-light" onclick="return confirm('Hapus Data?')">Hapus</a>
+                    </button>
+                </td>
+            </tr>
+
+            {% endfor %}
+
+            
+        </table>
+    </div>
 
     <!-- FOOTER -->
     <footer class="footer pt-5 mt-5 text-light bg-dark">

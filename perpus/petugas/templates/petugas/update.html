@@ -8,13 +8,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME</title>
+    <title>UPDATE PETUGAS</title>
 
     <!-- MENGGUNAKAN BOOTSTRAP -->
     <!-- <link rel="stylesheet" href="{% static 'bootstrap/bootstrap.css' %}"> -->
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
     <!-- ONLINE -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
 
@@ -75,22 +76,22 @@
         </div>
     </nav>
 
-    <!-- HEADLINE -->
-    <div class="container d-flex justify-content-center mt-5">
-        <div class="w-50">
-            <hr>
-            <h5>Perpustakaan SMKN 3 Sumbawa besar</h5>
-            <p id="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro obcaecati, consequuntur dolorem soluta cum doloremque deleniti hic nulla consectetur similique. Iste voluptatem autem molestiae reprehenderit eaque minus ullam quidem impedit. </p>
-            <center>
-                <a href="#">
-                    <button class="btn btn-dark">More</button>
-                </a>
-            </center>
-            <hr>
-        </div>
-    </div>
-
     <!-- CONTENT -->
+    <div class="container mt-5">
+        <h1 class="text-center">UPDATE DATA PETUGAS</h1><hr>
+
+        <form method="post" class="form w-50 text-center m-auto">
+            {% csrf_token %}
+            {{ dataForm.nama }}
+            {{ dataForm.jabatan }}
+            {{ dataForm.username }}
+            <input type="text" name="password" class="form-control mt-2" placeholder="Masukkan Password" value="{{ dataForm.password.value }}">
+
+            <button type="submit" class="btn btn-primary mt-2">Update</button>
+        </form>
+
+
+    </div>
 
     <!-- FOOTER -->
     <footer class="footer pt-5 mt-5 text-light bg-dark">
@@ -143,9 +144,8 @@
 
     <!-- SCRIPT JS ONLINE -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous">
-    </script>
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+        </script>
     <!-- <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script> -->
 </body>
 
