@@ -85,7 +85,8 @@
             {{ dataForm.nama }}
             {{ dataForm.jabatan }}
             {{ dataForm.username }}
-            <input type="text" name="password" class="form-control mt-2" placeholder="Masukkan Password" value="{{ dataForm.password.value }}">
+            {{ dataForm.password }}
+            <!-- <input type="text" name="password" class="form-control mt-2" placeholder="Masukkan Password" value="{{ dataForm.password.value }}"> -->
 
             <button type="submit" class="btn btn-primary mt-2">Update</button>
         </form>
@@ -133,6 +134,9 @@
                             <i class="bi bi-instagram"></i>
                             <a href="">Instagram</a>
                         </li>
+                        <li>
+                            <i class="bi bi-person"></i>
+                            <a href="">About</a>
                         </li>
                     </ul>
                 </div>

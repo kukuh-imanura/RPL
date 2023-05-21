@@ -92,11 +92,10 @@ def hapus(request, petugas_id):
     petugas = get_object_or_404(tabelPetugas, kodePetugas=petugas_id)
 
     if petugas.delete() :
-        tbPetugas = tabelPetugas.objects.all()
-    
-    dictionary  = {
-        'petugas'   : petugas,
-        'dataPetugas'   : tbPetugas,
-    }
+        return redirect('../../')
+    else:
+        dictionary = {
+            'error_message': 'Data tidak dihapus.'
+        }
 
     return render(request, 'petugas/index.html', dictionary)
