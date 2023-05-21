@@ -23,4 +23,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),
     path('petugas/', include('petugas.urls')),
+    path('anggota/', include('anggota.urls')),
 ]

@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TAMBAH PETUGAS</title>
+    <title>TAMBAH ANGGOTA</title>
 
     <!-- MENGGUNAKAN BOOTSTRAP -->
     <!-- <link rel="stylesheet" href="{% static 'bootstrap/bootstrap.css' %}"> -->
@@ -78,14 +78,17 @@
 
     <!-- CONTENT -->
     <div class="container mt-5">
-        <h1 class="text-center">TAMBAH DATA PETUGAS</h1><hr>
+        <h1 class="text-center">TAMBAH DATA ANGGOTA</h1><hr>
 
         <form method="post" class="form w-50 text-center m-auto">
             {% csrf_token %}
+            {{ dataForm.nim }}
             {{ dataForm.nama }}
-            {{ dataForm.jabatan }}
-            {{ dataForm.username }}
-            {{ dataForm.password }}
+            {{ dataForm.jurusan }}
+            {{ dataForm.tanggal_lahir }}
+            {{ dataForm.alamat }}
+            {{ dataForm.kode_post }}
+            {{ dataForm.hp }}
 
             <button type="submit" class="btn btn-primary mt-2">Tambah</button>
         </form>
